@@ -1,16 +1,50 @@
-# React + Vite
+# e-plantShopping
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# Paradise Nursery Shopping Application
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+e-plantShopping is a React-based online plant shopping application called Paradise Nursery.
 
-## React Compiler
+The application allows users to browse houseplants by category, view plant images, names, descriptions and prices, add plants to a shopping cart, manage quantities, remove products, and calculate shopping cart totals.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Paradise Nursery landing page
+- Welcome to Paradise Nursery heading
+- Get Started button
+- Plant product listing
+- Three plant categories
+- Six unique plants per category
+- Plant thumbnails
+- Plant names
+- Plant descriptions
+- Plant prices
+- Add to Cart functionality
+- Add to Cart button becomes disabled after a plant is added
+- Dynamic shopping cart item count
+- Shopping cart management
+- Increase quantity
+- Decrease quantity
+- Delete cart items
+- Individual item totals
+- Overall cart total
+- Continue Shopping button
+- Checkout button with Coming Soon message
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Technologies Used
+
+- React
+- Vite
+- Redux Toolkit
+- React Redux
+- React Router
+- CSS
+
+## Project Name
+
+e-plantShopping
+
+## Company
+
+Paradise Nursery
