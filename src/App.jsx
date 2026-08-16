@@ -1,9 +1,11 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 import ProductList from "./components/ProductList";
 import CartItem from "./components/CartItem";
 import AboutUs from "./components/AboutUs";
+
 import "./App.css";
 
 function Navbar() {
@@ -32,21 +34,25 @@ function Navbar() {
 }
 
 function LandingPage() {
-  const navigate = useNavigate();
+  const [showProducts, setShowProducts] = useState(false);
+
+  if (showProducts) {
+    return <ProductList />;
+  }
 
   return (
-    <div className="landing-page">
+    <div className="background-image">
       <div className="landing-overlay">
-        <h1>Paradise Nursery</h1>
+        <h1>Welcome to Paradise Nursery</h1>
 
         <p>
-          Bring nature into your home with beautiful, healthy and carefully
-          selected houseplants.
+          Bring nature into your home with beautiful, healthy
+          and carefully selected houseplants.
         </p>
 
         <button
           className="get-started-button"
-          onClick={() => navigate("/plants")}
+          onClick={() => setShowProducts(true)}
         >
           Get Started
         </button>
@@ -68,6 +74,9 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
+}
+
+export default App;
 }
 
 export default App;
