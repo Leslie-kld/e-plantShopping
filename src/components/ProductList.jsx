@@ -170,13 +170,11 @@ const plants = [
 ];
 
 function ProductList() {
-  const dispatch = useDispatch();
+ const cartItems = useSelector((state) => state.cart.items);
 
-  const cartItems = useSelector((state) => state.cart.items);
-
-  const isInCart = (id) => {
-    return cartItems.some((item) => item.id === id);
-  };
+const isProductInCart = (productId) => {
+  return cartItems.some((item) => item.id === productId);
+};
 
   const categories = [
     "Air Purifying Plants",
@@ -215,14 +213,14 @@ function ProductList() {
                     </div>
 
                     <button
-                      className="add-button"
-                      onClick={() => dispatch(addItem(plant))}
-                      disabled={isInCart(plant.id)}
-                    >
-                      {isInCart(plant.id)
-                        ? "Added to Cart"
-                        : "Add to Cart"}
-                    </button>
+  className="add-button"
+  onClick={() => dispatch(addItem(plant))}
+  disabled={isProductInCart(plant.id)}
+>
+  {isProductInCart(plant.id)
+    ? "Added to Cart"
+    : "Add to Cart"}
+</button>
                   </div>
                 </div>
               ))}
